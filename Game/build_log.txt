@@ -1,0 +1,8 @@
+make: Entering directory '/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff'
+gcc -o ff main.o memory.o output.o parse.o expressions.o inst_pre.o inst_easy.o inst_hard.o inst_final.o relax.o search.o scan-fct_pddl.tab.o scan-ops_pddl.tab.o  -O6 -Wall -g    -lm -lfl
+/usr/bin/ld: relax.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/relax.c:104: multiple definition of `lnum_F'; expressions.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/expressions.c:490: first defined here
+/usr/bin/ld: relax.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/relax.c:103: multiple definition of `lF'; expressions.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/expressions.c:488: first defined here
+/usr/bin/ld: scan-fct_pddl.tab.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/lex-fct_pddl.l:30: multiple definition of `gbracket_count'; main.o:/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff/main.c:148: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:58: ff] Error 1
+make: Leaving directory '/mnt/c/Users/tooto/Desktop/Projects/BlockMove/Game/ff'

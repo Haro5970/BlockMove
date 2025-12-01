@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/blockmove#"
+     xml:base="http://example.org/blockmove"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/blockmove"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#Entity"/>
+    <owl:Class rdf:about="#Player">
+        <rdfs:subClassOf rdf:resource="#Entity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Block">
+        <rdfs:subClassOf rdf:resource="#Entity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Wall">
+        <rdfs:subClassOf rdf:resource="#Entity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Hole">
+        <rdfs:subClassOf rdf:resource="#Entity"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Board"/>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="#hasX">
+        <rdfs:domain rdf:resource="#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasY">
+        <rdfs:domain rdf:resource="#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasWidth">
+        <rdfs:domain rdf:resource="#Board"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#hasHeight">
+        <rdfs:domain rdf:resource="#Board"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <!-- Individuals -->
+    <owl:NamedIndividual rdf:about="#TheBoard">
+        <rdf:type rdf:resource="#Board"/>
+        <hasWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasWidth>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasHeight>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Player1">
+        <rdf:type rdf:resource="#Player"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Block1">
+        <rdf:type rdf:resource="#Block"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Block2">
+        <rdf:type rdf:resource="#Block"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Wall1">
+        <rdf:type rdf:resource="#Wall"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Wall2">
+        <rdf:type rdf:resource="#Wall"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Wall3">
+        <rdf:type rdf:resource="#Wall"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasY>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Hole1">
+        <rdf:type rdf:resource="#Hole"/>
+        <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasX>
+        <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasY>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
